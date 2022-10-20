@@ -3,9 +3,10 @@ const Schema = mongoose.Schema
 
 const Listing = new Schema(
   {
-    name: { type: String, required: true },
+    listing_id: { type: String, required: true },
     name: { type: String, required: true },
     location: { type: String, required: true },
+    City: { type: String, required: true },
     type: { type: String, required: true },
     rating: { type: String, required: true }
   },
