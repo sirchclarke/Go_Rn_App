@@ -149,3 +149,7 @@ GameDetails will display specific information for an individual game.
 ## Credits and Citations
 
 - https://www.alltrails.com/
+
+### Deploy
+
+-deployes using heroku [here](https://dashboard.heroku.com/apps/go-rn/deploy/github)
