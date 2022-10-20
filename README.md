@@ -2,81 +2,33 @@
 
 Outdoor Hikes, lookouts and hangs
 
-# RAWG Router
+# Notes to consider
 
 /// MAIN REF: RAWG AND PLANTS LAB!
 
-<div>
-  <img alt="RAWG" src="https://i0.wp.com/operationrainfall.com/wp-content/uploads/2019/06/RAWG-Featured.jpg?fit=1920%2C1080&ssl=1" />
-</div>
-
 ## Overview
 
-We will be building a frontend website with React, React Router, and the [RAWG API](https://rawg.io/apidocs). We'll be getting practice with routing dynamically with `react-router-dom` elements and with making API calls with `axios` inside of useEffect Hooks. Try to think of this lab like a puzzle, where you'll be adding in the pieces we need to create a functioning game website.
+App used to locate quick and easy outdoor spots near you. Making getting outdoors easy and accesible. Whether your looking to hike or find yourself hanging out in a calm area to picnic or chill using GO RN will get help you get there. Members can contribute listings add ratings and log visits.
+
+// would be cool to integrate with strava and alltrails for an interesting social aspect.
 
 A deployed, final version of what we are building can be found [here](https://www.rawg-router.com/)
 
-[RAWG API Docs](https://rawg.io/apidocs)
-
-The endpoints (URL strings) we will be using with this API have been provided below. Starter code and component files have also been provided.
-
 ### Endpoints
 
-```js
-[GET] Search `https://api.rawg.io/api/games?key=${API_KEY}&search=${searchQuery}`
-[GET] Genres `https://api.rawg.io/api/genres?key=${API_KEY}`
-[GET] Game Details `https://api.rawg.io/api/games/${gameId}?key=${API_KEY}`
-[GET] DLC `https://api.rawg.io/api/games/${gameId}/additions?key=${API_KEY}` (Bonus)
-```
+// Future EndPoints Here
 
 ## Getting Started
 
-- `Fork` and `clone` this repository
-- `npm i` to install dependencies (axios and react-router-dom have already been added to the package.json for you)
+- Login to view, add or rate Locations
 
 ## Instructions
-
-## Generating an API Key
-
-In order to complete this assignment, you'll need an API key from [here](https://rawg.io/login?forward=developer).
-
-Store this key in a `.env` file at the root of this repo, (Same level as the package.json). Here's an example:
-
-`.env`
-
-```
-REACT_APP_RAWG_KEY=1A2B3C4D5E6F7G8H9I
-```
-
-Be sure and add your `.env` file to your `.gitignore` simply by typing ".env" on line 3 in the `.gitignore` file!
-
-Restart your React dev server with `npm start` and you can now utilize the key like in the following example: `process.env.REACT_APP_RAWG_KEY`
-
-Note: You can name your key _anything you want_ as long as it starts with `REACT_APP` and is in **SCREAMING_SNAKE_CASE** without any spaces.
 
 ### App Architecture
 
 The flow and frame work of the front end was desigin using Lucid at [here](https://lucid.app/lucidchart/6a28eb7f-bde2-4c2c-84a4-da06b9f17f81/edit?viewport_loc=354%2C-344%2C1182%2C794%2C0_0&invitationId=inv_cbb9af92-6285-45e9-85ce-e77adea5109a)
 
-<p align="center" >
-  <img alt="tree" src="public/assets/images/Component Hierarchy Diagram.png" />
-</p>
-
-Let's start with `index.js`, followed by `App.js`. In `index.js`, we'll need one additional import:
-
-```js
-import { BrowserRouter } from 'react-router-dom'
-```
-
-- `BrowserRouter` should then be wrapped around `App` to allow routing within our application.
-
-```js
-root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-)
-```
+````
 
 #### App.js
 
@@ -91,24 +43,7 @@ import { Route, Routes } from 'react-router-dom'
 import Header from './components/Header'
 // Other component imports here
 
-//...
 
-  <div>
-    <Header />
-    <main>
-      <Routes>
-        <Route path="" element={} />
-        <Route path="" element={} />
-        <Route path="" element={} />
-        <Route path="" element={} />
-      </Routes>
-    </main>
-  </div>
-
-//...
-```
-
-- Add the proper component and import for each `<Route/>` within the `<Routes/>` as you work through this lab. Each Route should have a path denoting specific URL patterns to render each component.
 
 Once finished, we've set up the basic structure of the app! Congrats!
 
@@ -120,14 +55,7 @@ For this section, we will start by building the smallest reusable parts of our a
 
 #### Header
 
-Let's start with the Header, so we can have active navigation between pages. Our Header only requires one import:
-
-```js
-import { Link } from 'react-router-dom'
-```
-
-- Within it's `<nav>` tag, it will need 2 `<Link/>` components that are links _to_ our Home `'/'` Route and our `'/about'` Route.
-- Once these 2 Links are finished, you are done with the Header component!
+-Contains a nav bar with search links to pages to login see maps or  view listings
 
 #### Search
 
@@ -135,26 +63,16 @@ Next, let's build out the Search component. This component will be used for sear
 
 ```js
 props.onSubmit, props.onChange, props.value
-```
+````
 
 - Notice that the Search component is a _form_
 - To build out Search properly, we need an input and a submit button
 - The input in Search should have these attributes:
 
-```jsx
-<input
-  type="text"
-  name="search"
-  value={props.value}
-  placeholder="Search Games"
-  onChange={props.onChange}
->
-```
-
 - Its `<button>` should have a _type_ of `"submit"`
 - Its `<form>` should have access to `props.onSubmit` within its own `onSubmit` attribute
 
-#### GameCard
+#### Directory
 
 Now, we will build out the structure for our GameCard. This component will be used to display and allow users to click on games on our Home and ViewGames pages. GameCard will have access to 4 props:
 
@@ -166,7 +84,7 @@ props.onClick, props.image, props.name, props.rating
 - Within its `'img-wrapper' <div>`, it will need an `<img>` tag with a "src" of `props.image`. Don't forget to give it an "alt" property!
 - Lastly, its `'game-card' <div>` should have an `onClick` with access to `props.onClick`
 
-#### GenreCard
+#### List Map
 
 The GenreCard will be used to display a card for each genre _within_ our `Home` page. GenreCard will have access to 4 props:
 
@@ -182,13 +100,9 @@ With that, we've finished the basic structure of our components!
 
 ---
 
-### Home and About Pages and Methods
-
-Now that we've finished the basic structure of our app's reusable components, let's build out the pages! Each page is unique, so we will look at each one individually. We will start with the least complex page structure and work our way up. In this section you will be working with the files inside of the `pages` folder in your app. To be clear, "pages" are still components, but these components are obviously playing a larger role in our app as they represent _entire views_ for our user. But calling them "pages" doesn't change anything about how they work. They're still components!
+### Ratings
 
 #### About Page
-
-The About page is typically the simplest page in an app. For our purposes, all we need with this page is an `<h1>` tag inside the main `<div>` in `About.js` denoting that it is in fact, the About page. More information can be added later on if you'd like. No imports are required with this page. The path for the `<Route/>` for this page in `App.js` should be `/about`.
 
 #### Home Page
 
