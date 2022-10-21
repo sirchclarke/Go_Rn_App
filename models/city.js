@@ -3,8 +3,8 @@ const Schema = mongoose.Schema
 
 const City = new Schema(
   {
-    City_id: { type: String, required: true },
-    State: { type: String, required: true },
+    city_id: { type: String, required: true },
+    state: { type: String, required: true },
     image: { type: String, required: true }
   },
   { timestamps: true }
