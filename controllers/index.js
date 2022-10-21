@@ -13,6 +13,16 @@ const createCity = async (req, res) => {
   }
 }
 
+const getAllCities = async (req, res) => {
+  try {
+    const city = await City.find()
+    return res.status(200).json({ city })
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 module.exports = {
-  createCity
+  createCity,
+  getAllCities
 }
