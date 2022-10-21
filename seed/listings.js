@@ -5,6 +5,7 @@ const Listing = require('../models/listing')
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
+  Listing.collection.drop()
   const listing = [
     {
       name: 'Point Defiance Outer Loop',
@@ -12,7 +13,7 @@ const main = async () => {
       city: '6352b7ac5359021f3b0f9910',
       type: 'Recreation',
       rating: '1'
-    },
+    }
     {
       name: 'Schmitz Park Preserve',
       location: 'Schmitz Blvd, Seattle, WA 98116',
