@@ -15,8 +15,8 @@ const createCity = async (req, res) => {
 
 const getAllCities = async (req, res) => {
   try {
-    const city = await City.find()
-    return res.status(200).json({ city })
+    const cities = await City.find()
+    return res.status(200).json({ cities })
   } catch (error) {
     return res.status(500).send(error.message)
   }
@@ -33,9 +33,15 @@ const getCityById = async (req, res) => {
     return res.status(500).send(error.message)
   }
 }
+const getListingsByCity = async (req, res) => {
+  const { cityId } = req.params
+  const listings = await Listing.find({ city: cityId })
+  return res.status(200).json(listings)
+}
 
 module.exports = {
   createCity,
   getAllCities,
-  getCityById
+  getCityById,
+  getListingsByCity
 }
