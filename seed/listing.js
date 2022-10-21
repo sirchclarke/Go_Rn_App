@@ -12,7 +12,7 @@ const main = async () => {
       location: 'Point Defiance Park, 5400 N Pearl St, Tacoma, WA 98407',
       City: 'Tacoma',
       Type: 'Recreation',
-      rating: ''
+      rating: '1'
     },
     {
       listing_id: '002',
@@ -20,7 +20,7 @@ const main = async () => {
       location: 'Schmitz Blvd, Seattle, WA 98116',
       city: 'Seattle',
       type: 'Recreation',
-      rating: ''
+      rating: '1'
     },
     {
       listing_id: '003',
@@ -28,7 +28,7 @@ const main = async () => {
       location: 'Oak Cliff, Dallas, TX 75237',
       city: 'Dallas',
       type: 'Cycling',
-      rating: ''
+      rating: '1'
     },
     {
       listing_id: '004',
@@ -36,7 +36,7 @@ const main = async () => {
       location: '2320 TX-178 Loop, Commerce, TX 75428',
       city: 'Commerce',
       type: 'Disc Golf',
-      rating: ''
+      rating: '1'
     },
     {
       listing_id: '005',
@@ -44,7 +44,7 @@ const main = async () => {
       location: '7867 Redwood Rd, Oakland, CA 94619',
       city: 'Oakland',
       type: 'Hike',
-      rating: ''
+      rating: '1'
     },
     {
       listing_id: '006',
@@ -52,7 +52,7 @@ const main = async () => {
       location: '5000 Piedmont Ave, Oakland, CA 94611',
       city: 'Oakland',
       type: 'Recreation',
-      rating: ''
+      rating: '1'
     },
     {
       listing_id: '007',
@@ -60,7 +60,7 @@ const main = async () => {
       location: '2800 Irving Ave, Astoria, OR 97103',
       city: 'Astoria',
       type: 'Recreation',
-      rating: ''
+      rating: '1'
     },
     {
       listing_id: '008',
@@ -68,7 +68,7 @@ const main = async () => {
       location: 'Florida A1A, Jacksonville, FL 32226',
       city: 'Jacksonville',
       type: 'Recreation',
-      rating: ''
+      rating: '1'
     }
   ]
 
