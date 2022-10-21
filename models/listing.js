@@ -7,7 +7,7 @@ const Listing = new Schema(
     location: { type: String, required: true },
     city: { type: Schema.Types.ObjectId, ref: 'City' },
     type: { type: String, required: true },
-    rating: { type: String, required: true }
+    rating: { type: String, required: '' }
   },
   { timestamps: true }
 )
