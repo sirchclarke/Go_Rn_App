@@ -13,7 +13,7 @@ const main = async () => {
       city: '6352b7ac5359021f3b0f9910',
       type: 'Recreation',
       rating: '1'
-    }
+    },
     {
       name: 'Schmitz Park Preserve',
       location: 'Schmitz Blvd, Seattle, WA 98116',
