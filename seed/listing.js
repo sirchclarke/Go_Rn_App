@@ -5,7 +5,6 @@ const Listing = require('../models/listing')
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
-  Listing.collection.drop()
   const listing = [
     {
       name: 'Point Defiance Outer Loop',

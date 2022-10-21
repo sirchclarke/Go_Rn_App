@@ -38,44 +38,10 @@ const getListingsByCity = async (req, res) => {
   const listings = await Listing.find({ city: cityId })
   return res.status(200).json(listings)
 }
-const createListing = async (req, res) => {
-  try {
-    const listing = await new Listing(req.body)
-    await listing.save()
-    return res.status(201).json({
-      city
-    })
-  } catch (error) {
-    return res.status(500).json({ error: error.message })
-  }
-}
-const getAllListings = async (req, res) => {
-  try {
-    const listings = await Listing.find()
-    return res.status(200).json({ listings })
-  } catch (error) {
-    return res.status(500).send(error.message)
-  }
-}
-const getListingById = async (req, res) => {
-  try {
-    const { id } = req.params
-    const listing = await City.findById(id)
-    if (listing) {
-      return res.status(200).json({ listing })
-    }
-    return res.status(404).send('Listing with the specified ID does not exists')
-  } catch (error) {
-    return res.status(500).send(error.message)
-  }
-}
 
 module.exports = {
   createCity,
   getAllCities,
   getCityById,
-  getListingsByCity,
-  createListing,
-  getAllListings,
-  getListingById
+  getListingsByCity
 }

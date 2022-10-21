@@ -1,15 +1,11 @@
 const { Router } = require('express')
 const controllers = require('../controllers')
 const router = Router()
-////City Controlllers
+
+router.get('/', (req, res) => res.send('This is rt!'))
 router.post('/city', controllers.createCity)
 router.get('/cities', controllers.getAllCities)
 router.get('/city/:id', controllers.getCityById)
-
-////Listing Controllers
-router.get('/listings/city/:cityId', controllers.getListingsByCity)
-router.post('/listing', controllers.createListing)
-router.get('/listings', controllers.getAllListings)
-router.get('/listing/:id', controllers.getListingById)
+router.get('/lisitngs/city/:cityId', controllers.getListingsByCity)
 
 module.exports = router
