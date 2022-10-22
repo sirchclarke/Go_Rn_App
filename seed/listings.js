@@ -9,56 +9,56 @@ const main = async () => {
     {
       name: 'Point Defiance Outer Loop',
       location: 'Point Defiance Park, 5400 N Pearl St, Tacoma, WA 98407',
-      city: '6352b7ac5359021f3b0f9910',
+      city: '63533905b62c4d896fabccdf',
       type: 'Recreation',
       rating: '1'
     },
     {
       name: 'Schmitz Park Preserve',
       location: 'Schmitz Blvd, Seattle, WA 98116',
-      city: '6352b7ac5359021f3b0f9911',
+      city: '63533905b62c4d896fabcce0',
       type: 'Recreation',
       rating: '1'
     },
     {
       name: 'Boulder Park Trail',
       location: 'Oak Cliff, Dallas, TX 75237',
-      city: '6352b7ac5359021f3b0f9912',
+      city: '63533905b62c4d896fabcce1',
       type: 'Cycling',
       rating: '1'
     },
     {
       name: 'TAMUC Disc Golf Course',
       location: '2320 TX-178 Loop, Commerce, TX 75428',
-      city: '6352b7ac5359021f3b0f9913',
+      city: '63533905b62c4d896fabcce2',
       type: 'Disc Golf',
       rating: '1'
     },
     {
       name: 'Reinhardt Redwood Regional Park',
       location: '7867 Redwood Rd, Oakland, CA 94619',
-      city: '6352b7ac5359021f3b0f9914',
+      city: '63533905b62c4d896fabcce3',
       type: 'Hike',
       rating: '1'
     },
     {
       name: 'Mountain view Cemetary',
       location: '5000 Piedmont Ave, Oakland, CA 94611',
-      city: '6352b7ac5359021f3b0f9915',
+      city: '63533905b62c4d896fabcce4',
       type: 'Recreation',
       rating: '1'
     },
     {
       name: 'Cathedral Tree Trail',
       location: '2800 Irving Ave, Astoria, OR 97103',
-      city: '6352b7ac5359021f3b0f9916',
+      city: '63533905b62c4d896fabcce5',
       type: 'Recreation',
       rating: '1'
     },
     {
       name: 'Amelia Island Trail',
       location: 'Florida A1A, Jacksonville, FL 32226',
-      city: '6352b7ac5359021f3b0f9917',
+      city: '63533905b62c4d896fabcce6',
       type: 'Recreation',
       rating: '1'
     }

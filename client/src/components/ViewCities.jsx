@@ -1,8 +1,14 @@
 import React from 'react'
 
-const viewCities = () => {
+const viewCities = (props) => {
   return (
-    <div>viewCities</div>
+    
+    <div>
+      <h1>
+{props.state}
+      </h1>
+      <img src={props.image} alt={props.state} />
+      </div>
   )
 }
 
