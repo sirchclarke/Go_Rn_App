@@ -1,5 +1,6 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Route } from 'react-router-dom'
+
 
 const Nav = () => {
   return (
@@ -7,7 +8,10 @@ const Nav = () => {
 
         <img src="" alt="logo" />
            <div> <NavLink to='/'>Home</NavLink>
-        <NavLink to='About'>About</NavLink></div>
+        <NavLink to='About'>About</NavLink>
+        <NavLink to='/listings'>Listings</NavLink>
+      
+        </div>
     </div>
   )
 }
