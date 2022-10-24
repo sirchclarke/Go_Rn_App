@@ -8,6 +8,7 @@ const ViewListings = (props) => {
     <div >
       <h2>{props.name}</h2>
       <h3>{props.location}</h3>
+      <p>{props.address}</p>
       <p>Experience:{props.type}</p>
       <p>Rating:{props.rating}</p>
     </div>

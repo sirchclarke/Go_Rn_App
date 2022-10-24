@@ -5,6 +5,7 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import ViewCities from '../components/ViewCities'
 import ViewListings from '../components/ViewListings'
+// import CityResults from '../components/CityResults'
 
 const Home = () => {
   const [searchResults, setSearchResults] = useState([])
@@ -15,7 +16,6 @@ const Home = () => {
   const getCities = async () => {
     const response = await axios.get(`http://localhost:3001/cities`)
     setCities(response.data.cities)
-    console.log(response.data)
   }
   useEffect(() => {
     getCities()
@@ -31,7 +31,7 @@ const Home = () => {
     e.preventDefault()
     const response = await axios.get(`http://localhost:3001/listings`)
     const filteredListings = response.data.listings.filter(listingMatched)
-    console.log(filteredListings)
+
     setSearchResults(filteredListings)
     toggleSearched(true)
     setSearchQuery('')
@@ -70,9 +70,18 @@ const Home = () => {
 
       <div>
         {cities.map((city) => (
-          <ViewCities key={city._id} state={city.state} image={city.image} />
+          <Link to={`/CityResults/${city._id}`}>
+            <ViewCities key={city._id} state={city.state} image={city.image} />
+          </Link>
         ))}
       </div>
+
+      {/* 
+      <div>
+        {cities.map((city) => (
+          <CityResults key={city._id} state={city.state} image={city.image} />
+        ))}
+      </div> */}
     </div>
   )
 }

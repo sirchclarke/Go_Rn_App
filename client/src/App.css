@@ -1,3 +1,26 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  color: rgb(175, 102, 102);
+  background-color: #fefefe;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+
+}
+input {
+  background-color: transparent;
+  border: 1px;
+  border-color: #282c34;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  padding: 0.5em 0.2em;
+  width: auto;
+  transition: all 0.2s;
+  font-size: 1.3rem;
+  color: rgb(46, 33, 33);
+}
+
 img{width: 300px; 
    height: 300px;}
 .App {
@@ -15,11 +38,6 @@ button {
   font-size: 1.1rem;
   cursor: pointer;
 }
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   background-color: #282c34;
@@ -31,10 +49,15 @@ button {
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.NavBar{
+  display: flex;
+  justify-content: space-between;
+  color: #282c34;
+}
 .NavContainer{
   display:flex;
   justify-content: space-between;
+
 }
 .App-link {
   color: #61dafb;
@@ -42,11 +65,6 @@ button {
 .cities .img-wrapper {
   width: auto;
 }
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Listing{
+text-align: left;
 }

@@ -9,8 +9,12 @@ const Search = (props) => {
     placeholder="Search Listings"
     onChange={props.onChange}></input>
   <button>Submit</button>
+  <h2> Search Results</h2>
            </form>
+           
     )
+  
   }
+ 
   
   export default Search
