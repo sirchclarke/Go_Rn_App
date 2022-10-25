@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 const ListingForm = (props) => {
   let navigate = useNavigate()
@@ -7,7 +8,7 @@ const ListingForm = (props) => {
     navigate('/listing')
 
   }
-
+ 
   const newListing = props.newListing
 
   return (
@@ -20,7 +21,7 @@ const ListingForm = (props) => {
       <input type="text" value={newListing.adress} onChange={ props.handleChange} name={'address'} placeholder={'address'} />
       <input type="text" value={newListing.type} onChange={ props.handleChange} name={'type'} placeholder={'type'} />
       <input type="text" value={newListing.rating} onChange={ props.handleChange} name={'rating'} placeholder={'rating'} />
-      <button>Submit</button>
+      <button type='submit'>Submit</button>
     </form>
     </div>
   )

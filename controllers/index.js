@@ -43,7 +43,7 @@ const createListing = async (req, res) => {
     const listing = await new Listing(req.body)
     await listing.save()
     return res.status(201).json({
-      city
+      listing
     })
   } catch (error) {
     return res.status(500).json({ error: error.message })

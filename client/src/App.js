@@ -6,12 +6,12 @@ import Nav from './components/Nav'
 import Home from './pages/Home'
 import Listing from './pages/Listing'
 import Listings from './pages/Listings'
-import { Params } from 'react-router-dom'
+import { params } from 'react-router-dom'
 import CityResults from './components/CityResults'
 import ListingForm from './components/ListingForm'
+import axios from 'axios'
 
 const App = () => {
-  const [listings, setListing] = useState(listingsArray)
   const [newListing, setNewListing] = useState({
     id: '',
     name: '',
@@ -22,26 +22,9 @@ const App = () => {
     rating: ''
   })
 
-  const addListing = (e) => {
+  const addListing = async (e) => {
     e.preventDefault()
-    const currentListings = listings
-    const createdListing = {
-      ...newListing,
-      id: parseInt(listings.length + 1),
-      review: parseInt(newListing.rating)
-    }
-
-    currentListings.push(createdListing)
-    setListing(currentListings)
-    setNewListing({
-      id: '',
-      name: '',
-      location: '',
-      city: '',
-      address: '',
-      type: '',
-      rating: ''
-    })
+    await axios.post('http://localhost:3001/listing', newListing)
   }
 
   const handleChange = (e) => {
