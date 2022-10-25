@@ -5,9 +5,7 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import ViewCities from '../components/ViewCities'
 import ViewListings from '../components/ViewListings'
-import listing from '../../../models/listing'
-import e from 'cors'
-// import CityResults from '../components/CityResults'
+import CityResults from '../components/CityResults'
 
 const Home = () => {
   const [searchResults, setSearchResults] = useState([])
@@ -43,40 +41,17 @@ const Home = () => {
     setSearchQuery(event.target.value)
   }
 
-
-
-
-const addListing =(e)=>
-e.preventDefault()
-const currentListings = listings
-const createdListing  = {
-  ...newListing,
-  id: parseInt(listings.length+1),
-  review: parseInt(newListing.rating)
-}
-
-currentListings.push(createdListing)
-setListing(currentListings)
-setNewListing({id:'',name:'',location:'',city:'',address:'',type:'',rating:''})
-}
-
-const handleChange=()=>{
-  setNewListing({...newListing, [e.target.name]:e.target.value})
-}
-
-
-
   return (
     <div>
       <div className="search">
-        <Search
+        {/* <Search
           onSubmit={getSearchResults}
           onChange={handleChange}
           value={searchQuery}
-        />
+        /> */}
 
         <section className="search-results container-grid">
-          {searched &&
+          {/* {searched &&
             searchResults.map((listings) => (
               <Link to={`/ViewListings/${listings._id}`}>
                 <ViewListings
@@ -89,7 +64,7 @@ const handleChange=()=>{
                   rating={listings.rating}
                 />
               </Link>
-            ))}
+            ))} */}
         </section>
       </div>
 
@@ -100,13 +75,6 @@ const handleChange=()=>{
           </Link>
         ))}
       </div>
-
-      {/* 
-      <div>
-        {cities.map((city) => (
-          <CityResults key={city._id} state={city.state} image={city.image} />
-        ))}
-      </div> */}
     </div>
   )
 }

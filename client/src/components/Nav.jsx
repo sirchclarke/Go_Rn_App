@@ -7,15 +7,14 @@ const Nav = () => {
   return (
     <div className='NavContainer'>
 <div>
-        <img src={gorn}/>
+        <img src={gorn} alt=''/>
         </div>
     
-           <div className='NavBar'> 
+       <div className='NavBar'> 
         <NavLink to='/'>Home</NavLink>
-        <NavLink to='About'>About</NavLink>
+        <NavLink to='/about'>About</NavLink>
         <NavLink to='/listings'>Listings</NavLink>
-        
-      
+        <NavLink to='/listing'>Add Listing</NavLink>
         </div>
     </div>
   )

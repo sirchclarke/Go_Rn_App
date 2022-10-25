@@ -1,6 +1,5 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import ViewListings from '../components/ViewListings'
 
@@ -18,16 +17,16 @@ const Listings = () => {
 
   return (
     <div>
-      {listings.map((listings) => (
-        <Link to={`/listings/${listings.id}`}>
+      {listings?.map((listing) => (
+        <Link to={`/listings/${listing?._id}`}>
           <ViewListings
-            key={listings._id}
-            name={listings.name}
-            location={listings.location}
-            city={listings.city}
-            address={listings.address}
-            type={listings.type}
-            rating={listings.rating}
+            key={listing?._id}
+            name={listing?.name}
+            location={listing?.location}
+            city={listing?.city}
+            address={listing?.address}
+            type={listing?.type}
+            rating={listing?.rating}
           />
         </Link>
       ))}

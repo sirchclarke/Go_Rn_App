@@ -18,10 +18,10 @@ const Listing = (props) => {
 
   const getListings = async () => {
     const response = await axios.get(`http://localhost:3001/listings`)
-    const filteredListings = response.data.listings.filter(listingMatched)
+    const filteredListings = response.data.listings.filter((listing) =>
+      listingMatched(listing)
+    )
     setListings(filteredListings)
-
-    console.log(response.data)
   }
   useEffect(() => {
     getListings()
