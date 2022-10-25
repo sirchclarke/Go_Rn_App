@@ -5,6 +5,8 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import ViewCities from '../components/ViewCities'
 import ViewListings from '../components/ViewListings'
+import listing from '../../../models/listing'
+import e from 'cors'
 // import CityResults from '../components/CityResults'
 
 const Home = () => {
@@ -40,6 +42,29 @@ const Home = () => {
   const handleChange = (event) => {
     setSearchQuery(event.target.value)
   }
+
+
+
+
+const addListing =(e)=>
+e.preventDefault()
+const currentListings = listings
+const createdListing  = {
+  ...newListing,
+  id: parseInt(listings.length+1),
+  review: parseInt(newListing.rating)
+}
+
+currentListings.push(createdListing)
+setListing(currentListings)
+setNewListing({id:'',name:'',location:'',city:'',address:'',type:'',rating:''})
+}
+
+const handleChange=()=>{
+  setNewListing({...newListing, [e.target.name]:e.target.value})
+}
+
+
 
   return (
     <div>
