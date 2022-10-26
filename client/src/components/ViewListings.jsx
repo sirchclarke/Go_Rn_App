@@ -18,11 +18,6 @@ const ViewListings = (props) => {
 
   
   return (
-    
-    
-  
-    
-    
       <div>
        <button onClick={deleteListing}> X</button>
       <Link to = {`/UpdateListingForm/${props.id}`}><button> O</button></Link>
@@ -34,6 +29,7 @@ const ViewListings = (props) => {
       <p>Experience:{props.type}</p>
       <p>Rating:{props.rating}</p>
       </div>
+      <img src={props.img} alt="pics" />
     </div>
     
   )

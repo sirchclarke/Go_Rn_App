@@ -34,8 +34,9 @@ const getCityById = async (req, res) => {
   }
 }
 const getListingsByCity = async (req, res) => {
-  const { cityId } = req.params
-  const listings = await Listing.find({ city: cityId }).populate('city')
+  const { id } = req.params
+  const listings = await Listing.find({ city_id: id })
+  // .populate('city')
   return res.status(200).json(listings)
 }
 const createListing = async (req, res) => {

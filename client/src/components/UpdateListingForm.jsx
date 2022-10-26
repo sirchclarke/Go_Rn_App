@@ -10,13 +10,13 @@ import { useParams } from 'react-router-dom'
 const UpdateListingForm =(props)=>{
     let { listingId } = useParams()
     const initialList={
-        _id: listingId,
         name:'',
         location:'',
         city:'',
         address:'',
         type:'',
         rating:'',
+        image:''
        
     }
     let [formState, setFormState]= useState(initialList)
@@ -40,13 +40,14 @@ const handleChange = (e) => {
         <div>
     <h1>update a Listing</h1>
     <form onSubmit={ handleSubmit }>
-      <input type="text" value={formState.name} onChange={ handleChange} name={'name'} placeholder={'name'} />
-      <input type="text" value={formState.location} onChange={ handleChange} name={'location'} placeholder={'location'} />
-      <input type="text-area" value={formState.city} onChange={handleChange} name={'city'} placeholder={'city'} />
-      <input type="text" value={formState.address} onChange={handleChange} name={'address'} placeholder={'address'} />
-      <input type="text" value={formState.type} onChange={ handleChange} name={'type'} placeholder={'type'} />
-      <input type="text" value={formState.rating} onChange={ handleChange} name={'rating'} placeholder={'rating'} />
-      <button type='submit'>Submit</button>
+      <input type="text" value={formState.name} onChange={ handleChange} id={'name'} placeholder={'name'} />
+      <input type="text" value={formState.location} onChange={ handleChange} id={'location'} placeholder={'location'} />
+      <input type="text-area" value={formState.city} onChange={handleChange} id={'city'} placeholder={'city'} />
+      <input type="text" value={formState.address} onChange={handleChange} id={'address'} placeholder={'address'} />
+      <input type="text" value={formState.type} onChange={ handleChange} id={'type'} placeholder={'type'} />
+      <input type="text" value={formState.rating} onChange={ handleChange} id={'rating'} placeholder={'rating'} />
+      <input type="text" value={formState.image} onChange={handleChange} id={'image'} placeholder={'image url'} />
+       <button type='submit'>Submit</button>
     </form>
     </div>
     )

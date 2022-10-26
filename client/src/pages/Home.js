@@ -13,8 +13,11 @@ const Home = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [cities, setCities] = useState([])
 
+  // const[citiesById, setCitiesById] = useState([])
+
   const getCities = async () => {
     const response = await axios.get(`http://localhost:3001/cities`)
+    console.log(response.data.cities)
     setCities(response.data.cities)
   }
   useEffect(() => {
@@ -52,7 +55,7 @@ const Home = () => {
 
         <section className="search-results container-grid">
           {searched &&
-            searchResults.map((listings) => (
+            searchResults?.map((listings) => (
               <Link to={`/ViewListings/${listings._id}`}>
                 <ViewListings
                   key={listings._id}
