@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom'
-import axios from 'axios'
+import { useParams } from 'react-router-dom'
+// import axios from 'axios'
 
 const ListingForm = (props) => {
   let navigate = useNavigate()
@@ -7,6 +8,9 @@ const ListingForm = (props) => {
     props.addListing(e)
     navigate('/listing')
 
+
+
+    
   }
  
   const newListing = props.newListing

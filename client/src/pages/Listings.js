@@ -21,6 +21,7 @@ const Listings = () => {
         <Link to={`/listings/${listing?._id}`}>
           <ViewListings
             key={listing?._id}
+            id={listing?._id}
             name={listing?.name}
             location={listing?.location}
             city={listing?.city}

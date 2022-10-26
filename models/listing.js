@@ -5,9 +5,10 @@ const Listing = new Schema(
   {
     name: { type: String, required: true },
     location: { type: String, required: true },
-    city: { type: Schema.Types.ObjectId, ref: 'City' },
+    city_id: { type: Schema.Types.ObjectId, ref: 'City' },
+    city: { type: String, required: true },
     address: { type: String, required: true },
-    location: { type: String, required: true },
+    type: { type: String, required: true },
     rating: { type: String, required: '' }
   },
   { timestamps: true }

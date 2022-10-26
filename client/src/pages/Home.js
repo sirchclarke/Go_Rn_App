@@ -44,14 +44,14 @@ const Home = () => {
   return (
     <div>
       <div className="search">
-        {/* <Search
+        <Search
           onSubmit={getSearchResults}
           onChange={handleChange}
           value={searchQuery}
-        /> */}
+        />
 
         <section className="search-results container-grid">
-          {/* {searched &&
+          {searched &&
             searchResults.map((listings) => (
               <Link to={`/ViewListings/${listings._id}`}>
                 <ViewListings
@@ -64,7 +64,7 @@ const Home = () => {
                   rating={listings.rating}
                 />
               </Link>
-            ))} */}
+            ))}
         </section>
       </div>
 

@@ -24,6 +24,7 @@ console.log(cityResults)
 
         <div>   
         <h2>{cityResult.name}</h2>
+        <h3>{cityResult.city}</h3>
         <h3>{cityResult.location}</h3>
         <p>{cityResult.address}</p>
         <p>Experience:{cityResult.type}</p>

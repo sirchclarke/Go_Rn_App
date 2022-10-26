@@ -1,14 +1,13 @@
 import { Routes, Route } from 'react-router-dom'
 import './App.css'
 import { useEffect, useState } from 'react'
-import listingsArray from './pages/Listing'
 import Nav from './components/Nav'
 import Home from './pages/Home'
 import Listing from './pages/Listing'
 import Listings from './pages/Listings'
-import { params } from 'react-router-dom'
 import CityResults from './components/CityResults'
 import ListingForm from './components/ListingForm'
+import UpdateListingForm from './components/UpdateListingForm'
 import axios from 'axios'
 
 const App = () => {
@@ -51,6 +50,10 @@ const App = () => {
                 addListing={addListing}
               />
             }
+          />
+          <Route
+            path="/UpdateListingForm/:listingId"
+            element={<UpdateListingForm />}
           />
         </Routes>
       </main>

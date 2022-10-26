@@ -18,7 +18,7 @@ const main = async () => {
     {
       name: 'Point Defiance Outer Loop',
       address: 'Point Defiance Park, 5400 N Pearl St, Tacoma, WA 98407',
-      city: Tacoma[0]._id,
+      city_id: Tacoma[0]._id,
       location: 'Tacoma,WA',
       type: 'Recreation',
       rating: '1'
@@ -26,7 +26,7 @@ const main = async () => {
     {
       name: 'Schmitz Park Preserve',
       address: 'Schmitz Blvd, Seattle, WA 98116',
-      city: Seattle[0]._id,
+      city_id: Seattle[0]._id,
       location: 'Seattle,WA',
       type: 'Recreation',
       rating: '1'
@@ -34,7 +34,7 @@ const main = async () => {
     {
       name: 'Boulder Park Trail',
       address: 'Oak Cliff, Dallas, TX 75237',
-      city: Dallas[0]._id,
+      city_id: Dallas[0]._id,
       location: 'Dallas,TX',
       type: 'Cycling',
       rating: '1'
@@ -42,7 +42,7 @@ const main = async () => {
     {
       name: 'TAMUC Disc Golf Course',
       address: '2320 TX-178 Loop, Commerce, TX 75428',
-      city: Commerce[0]._id,
+      city_id: Commerce[0]._id,
       location: 'Commerce,TX',
       type: 'Disc Golf',
       rating: '1'
@@ -50,7 +50,7 @@ const main = async () => {
     {
       name: 'Reinhardt Redwood Regional Park',
       address: '7867 Redwood Rd, Oakland, CA 94619',
-      city: Oakland[0]._id,
+      city_id: Oakland[0]._id,
       location: 'Oakland,CA',
       type: 'Hike',
       rating: '1'
@@ -58,7 +58,7 @@ const main = async () => {
     {
       name: 'Mountain view Cemetary',
       address: '5000 Piedmont Ave, Oakland, CA 94611',
-      city: Oakland[0]._id,
+      city_id: Oakland[0]._id,
       location: 'Oakland,CA',
       type: 'Recreation',
       rating: '1'
@@ -66,7 +66,7 @@ const main = async () => {
     {
       name: 'Cathedral Tree Trail',
       address: '2800 Irving Ave, Astoria, OR 97103',
-      city: Astoria[0]._id,
+      city_id: Astoria[0]._id,
       location: 'Astoria,OR',
       type: 'Recreation',
       rating: '1'
@@ -74,7 +74,7 @@ const main = async () => {
     {
       name: 'Amelia Island Trail',
       address: 'Florida A1A, Jacksonville, FL 32226',
-      city: Jacksonville[0]._id,
+      city_id: Jacksonville[0]._id,
       location: 'Jacksonville,FL',
       type: 'Recreation',
       rating: '1'
