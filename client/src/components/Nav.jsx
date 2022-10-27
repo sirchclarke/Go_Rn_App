@@ -5,13 +5,15 @@ import gorn from '../images/gorn.png'
 
 const Nav = () => {
   return (
+    
     <div className='NavContainer'>
 <div>
-        <img src={gorn} alt=''/>
+        <img className="logo" src={gorn} alt=''/>
         </div>
     
        <div className='NavBar'> 
         <NavLink to='/'>Home</NavLink>
+        
         <NavLink to='/about'>About</NavLink>
         <NavLink to='/listings'>Listings</NavLink>
         <NavLink to='/listing'>Add Listing</NavLink>
