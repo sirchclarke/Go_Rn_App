@@ -45,6 +45,7 @@ const ListingForm = () => {
             value={newListing.city}
             required
           >
+            <option value="null">Select City</option>
             <option value="Tacoma,WA">Tacoma</option>
             <option value="Seattle,WA">Seattle</option>
             <option value="Dallas,TX">Dallas</option>

@@ -47,12 +47,15 @@ const Home = () => {
   return (
     <div>
       <div className="search">
+      <div className="results">
+          <h2> Search Results</h2>
+        </div>
         <Search
           onSubmit={getSearchResults}
           onChange={handleChange}
           value={searchQuery}
         />
-
+       
         <section className="search-results container-grid">
           {searched &&
             searchResults?.map((listings) => (

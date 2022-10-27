@@ -19,8 +19,8 @@ const ViewListings = (props) => {
   
   return (
       <div>
-       <button onClick={deleteListing}> X</button>
-      <Link to = {`/UpdateListingForm/${props.id}`}><button> O</button></Link>
+       <button onClick={deleteListing}> Delete</button>
+      <Link to = {`/UpdateListingForm/${props.id}`}><button> Update</button></Link>
       <div className="listing view-listing" id= "info-wrapper flex-col" onClick={props.onClick}>
       <h2>{props.name}</h2>
       <h3>{props.location}</h3>

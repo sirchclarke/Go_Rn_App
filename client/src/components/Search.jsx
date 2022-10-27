@@ -12,9 +12,7 @@ const Search = (props) => {
   <button type="submit" class="searchButton">Submit</button>
   <i class="searchfor" ></i>
            </form>
-           <div className="Results">
-            <h2> Search Results</h2>
-           </div>
+           
            </div>
            
     )
