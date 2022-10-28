@@ -13,8 +13,7 @@ const Nav = () => {
     
        <div className='NavBar'> 
         <NavLink to='/'>Home</NavLink>
-        
-        <NavLink to='/about'>About</NavLink>
+        <NavLink to={'/About'}>About</NavLink>
         <NavLink to='/listings'>Listings</NavLink>
         <NavLink to='/listing'>Add Listing</NavLink>
         </div>

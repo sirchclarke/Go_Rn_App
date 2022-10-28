@@ -29,7 +29,7 @@ const ViewListings = (props) => {
       <p>Experience:{props.type}</p>
       <p>Rating:{props.rating}</p>
       </div>
-      <img src={props.img} alt="pics" />
+      {/* <img src={props.img} alt="pics" /> */}
     </div>
     
   )

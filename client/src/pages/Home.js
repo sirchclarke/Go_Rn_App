@@ -5,7 +5,6 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import ViewCities from '../components/ViewCities'
 import ViewListings from '../components/ViewListings'
-import CityResults from '../components/CityResults'
 
 const Home = () => {
   const [searchResults, setSearchResults] = useState([])
@@ -47,9 +46,6 @@ const Home = () => {
   return (
     <div>
       <div className="search">
-        <div className="results">
-          <h2> </h2>
-        </div>
         <Search
           onSubmit={getSearchResults}
           onChange={handleChange}
@@ -68,6 +64,7 @@ const Home = () => {
                   city={listings.city}
                   type={listings.type}
                   rating={listings.rating}
+                  // img={listings.img}
                 />
               </Link>
             ))}

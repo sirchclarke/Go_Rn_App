@@ -33,7 +33,7 @@ const ListingForm = () => {
  
       
   return (
-    <div>
+    <div className='Formcontainer'>
     <h1>Add A New Listing</h1>
     <form onSubmit={ handleSubmit }>
       <input type="text" value={newListing.name} onChange={ handleChange} id={'name'} placeholder={'name'} />

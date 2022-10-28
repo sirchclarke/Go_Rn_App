@@ -1,21 +1,19 @@
 const Search = (props) => {
 
     return (
-      <div class="wrap" >
-         <div className="Resultstxt">
-            <h2> Search Results</h2>
-           </div>
-  <form class="search" onSubmit={props.onSubmit}>
-  <input class="searchit"
+      <div className="wrap" >
+         
+  <form className="search" onSubmit={props.onSubmit}>
+  <input className="searchit"
     type="text"
     name="search"
     value={props.value}
     placeholder="Search Listings"
     onChange={props.onChange}></input>
-  <button type="submit" class="searchButton">Submit</button>
-  <i class="searchfor" ></i>
+  <button type="submit" className="searchButton">Submit</button>
+  <i className="searchfor" ></i>
            </form>
-          
+           
            </div>
            
     )

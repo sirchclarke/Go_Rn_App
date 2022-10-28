@@ -6,7 +6,7 @@ let dbUrl = process.env.MONGODB_URI
 mongoose
   .connect(dbUrl)
   .then(() => {
-    console.log('Successfully connected to MongoDB!')
+    console.log(`Successfully connected to MongoDB at ${dbUrl}!`)
   })
   .catch((e) => {
     console.error('Connection error', e.message)
