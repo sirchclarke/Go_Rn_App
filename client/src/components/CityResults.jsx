@@ -18,7 +18,7 @@ const CityResults = () => {
     },[]
     )    
 
-console.log(cityResults)
+
     return (
       cityResults.map((cityResult)=>(
 

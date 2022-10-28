@@ -4,6 +4,7 @@ body {
   background: url("./images/background.png");
  
     height: 100%;
+    width: 100%;
     margin-top: 250px;
   margin: 0;
   padding: 0;
@@ -20,20 +21,20 @@ body {
  position:relative;
  display: flex;
  flex-direction: column;
- top: 20px;
- right: -50px;
+ top: -30px;
+ right: -250px;
 }
 
 .searchit{
   position: relative;
   top: -200px;
-  left: 700px;
+  left: 900px;
 width: 100%;
 border: 3px solid #61dafb;
 border-right: none;
 padding: 5px;
 height: 20px;
-border-radius: 0 5px 5px 0;
+border-radius: 0 1px 1px 0;
 outline: none;
 color: #00b4cc;
 }
@@ -43,18 +44,27 @@ color: #00b4cc;
 .searchButton{
   position: relative;
   top: -236px;
-  left: 975px;
+  left: 1350px;
   width: 90px;
-  height: 36px;
+  height: 40px;
   border: 1px solid #00b4cc;
   background: #00b4cc;
   text-align: center;
   color: #fff;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 1=20px;
 }
-
+.search-results{
+  left:-250px;
+  position: relative;
+  justify-content: center;
+}
+.Resultstxt{
+  top: 50px;
+  left:-750px;
+  justify-content: center;
+}
 .wrap{
   width: 30%;
  
@@ -64,7 +74,8 @@ color: #00b4cc;
 }
 .results{
   position: relative;
-  left: -100px;
+  top:20px;
+  left: -45px;
 display:flex;
 align-items: center;
 justify-content: center;
@@ -107,7 +118,7 @@ img {width: 300px;
   pointer-events: none;
 }
 button {
-  padding: 0.2em 1em;
+  padding: 0.1em 1em;
   border: 2px solid #718daa;
   border-radius: 4px ;
   font-size: 1.1rem;
@@ -125,11 +136,13 @@ button {
   color: white;
 }
 .NavBar{
-margin-top: 5px;
-  color: #282c34;
+margin-top: 1px;
+  color: #61dafb;
+  justify-content:space-evenly;
 }
 .NavBar a{
-  font-size: .99em;
+  font-size: 1em;
+  color: #61dafb ;
 }
 .NavBar a:hover{
   color:#718daa
@@ -141,7 +154,7 @@ margin-top: 5px;
   background-color: #af9595;
   box-shadow:0px 0px 14px 0px rgba(0,0,0,0.75);
   border-radius:5px;
-  justify-content: space-between;
+ justify-content: space-between;
 
 }
 @media (min-width: 769px){
@@ -151,10 +164,7 @@ margin-top: 5px;
   .NavContainer {
     flex-direction: column;
     
-    .NavContainer{
-      width: 0 auto;
-      max-width: 1150px;
-    }
+    
     }
 }
 .App-link {
@@ -168,4 +178,66 @@ text-align: left;
 }
 .listing .view-listing{
 color: darkslategrey;
+}
+
+
+
+
+
+
+
+*{
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.Formcontainer {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
