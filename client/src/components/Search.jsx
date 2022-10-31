@@ -1,10 +1,10 @@
 const Search = (props) => {
 
     return (
-      <div className="wrap" >
+      <div className="search-wrap" >
          
   <form className="search" onSubmit={props.onSubmit}>
-  <input className="searchit"
+  <input className="searchbox"
     type="text"
     name="search"
     value={props.value}
@@ -13,7 +13,9 @@ const Search = (props) => {
   <button type="submit" className="searchButton">Submit</button>
   <i className="searchfor" ></i>
            </form>
-           
+           <div className="Resultstxt">
+            <h2> Search Results</h2>
+           </div>
            </div>
            
     )

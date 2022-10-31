@@ -22,7 +22,7 @@ const CityResults = () => {
     return (
       cityResults.map((cityResult)=>(
 
-        <div>   
+        <div className='cityresults'>   
         <h2>{cityResult.name}</h2>
         <h3>{cityResult.city}</h3>
         <h3>{cityResult.location}</h3>

@@ -21,15 +21,16 @@ const ViewListings = (props) => {
       <div>
        <button onClick={deleteListing}> Delete</button>
       <Link to = {`/UpdateListingForm/${props.id}`}><button> Update</button></Link>
-      <div className="listing view-listing" id= "info-wrapper flex-col" onClick={props.onClick}>
+      <div className="view-listing" id= "info-wrapper flex-col" onClick={props.onClick}>
       <h2>{props.name}</h2>
       <h3>{props.location}</h3>
       <h3>{props.city}</h3>
       <p>{props.address}</p>
       <p>Experience:{props.type}</p>
       <p>Rating:{props.rating}</p>
-      </div>
-      {/* <img src={props.img} alt="pics" /> */}
+      {/* </div>
+       <img src={props.image} alt="scene" />  */}
+    </div>
     </div>
     
   )

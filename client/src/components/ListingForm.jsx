@@ -15,7 +15,7 @@ const ListingForm = () => {
     address: '',
     type: '',
     rating: '',
-    image:''
+  
   }
 
    
@@ -38,14 +38,14 @@ const ListingForm = () => {
     <form onSubmit={ handleSubmit }>
       <input type="text" value={newListing.name} onChange={ handleChange} id={'name'} placeholder={'name'} />
       <input type="text" value={newListing.location} onChange={ handleChange} id={'location'} placeholder={'location'} />
-      <input type="text-area" value={newListing.city} onChange={ handleChange} id={'city'} placeholder={'city'} />
+      <input type="text-area" value={newListing.city} onChange={ handleChange} id={'city'} placeholder={' Select city'} />
       <select
             id="city"
             onChange={handleChange}
             value={newListing.city}
             required
           >
-            <option value="null">Select City</option>
+           
             <option value="Tacoma,WA">Tacoma</option>
             <option value="Seattle,WA">Seattle</option>
             <option value="Dallas,TX">Dallas</option>
@@ -60,7 +60,7 @@ const ListingForm = () => {
       <input type="text" value={newListing.address} onChange={ handleChange} id={'address'} placeholder={'address'} />
       <input type="text" value={newListing.type} onChange={ handleChange} id={'type'} placeholder={'type'} />
       <input type="text" value={newListing.rating} onChange={ handleChange} id={'rating'} placeholder={'rating'} />
-      <input type="text" value={newListing.image}  onChange={ handleChange} id={'image'} placeholder={'Img URL'}/>
+      
       <button type='submit'>Submit</button>
     </form>
     </div>

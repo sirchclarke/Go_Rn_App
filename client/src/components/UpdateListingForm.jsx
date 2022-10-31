@@ -15,8 +15,8 @@ const UpdateListingForm =(props)=>{
         city:'',
         address:'',
         type:'',
-        rating:'',
-        image:''
+        rating:''
+   
        
     }
     let [formState, setFormState]= useState(initialList)
@@ -24,12 +24,13 @@ const UpdateListingForm =(props)=>{
 const handleSubmit=async(e)=>{
     e.preventDefault()
     await axios.put(`http://localhost:3001/listing/${listingId}`,formState)
+    setFormState(initialList)
     navigate('/listings')
 }
 
 
 const handleChange = (e) => {
-    setFormState({ ...formState, [e.target.name]: e.target.value })
+    setFormState({ ...formState, [e.target.id]: e.target.value })
   }
 
 
@@ -37,16 +38,15 @@ const handleChange = (e) => {
 
     
     return(
-        <div>
-    <h1>update a Listing</h1>
-    <form onSubmit={ handleSubmit }>
-      <input type="text" value={formState.name} onChange={ handleChange} id={'name'} placeholder={'name'} />
-      <input type="text" value={formState.location} onChange={ handleChange} id={'location'} placeholder={'location'} />
-      <input type="text-area" value={formState.city} onChange={handleChange} id={'city'} placeholder={'city'} />
+        <div className='updatecontainer'>
+    <h1>Update a Listing</h1>
+    <form onSubmit={handleSubmit}>
+      <input type="text" value={formState.name} onChange={handleChange} id={'name'} placeholder={'name'} />
+      <input type="text" value={formState.location} onChange={handleChange} id={'location'} placeholder={'location'} />
+      <input type="text" value={formState.city} onChange={handleChange} id={'city'} placeholder={'city'} />
       <input type="text" value={formState.address} onChange={handleChange} id={'address'} placeholder={'address'} />
-      <input type="text" value={formState.type} onChange={ handleChange} id={'type'} placeholder={'type'} />
-      <input type="text" value={formState.rating} onChange={ handleChange} id={'rating'} placeholder={'rating'} />
-      <input type="text" value={formState.image} onChange={handleChange} id={'image'} placeholder={'image url'} />
+      <input type="text" value={formState.type} onChange={handleChange} id={'type'} placeholder={'type'} />
+      <input type="text" value={formState.rating} onChange={handleChange} id={'rating'} placeholder={'rating'} />
        <button type='submit'>Submit</button>
     </form>
     </div>
