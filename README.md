@@ -74,6 +74,7 @@ The ERD was designed in DrawIO at [here](https://viewer.diagrams.net/?tags=%7B%7
 -https://www.w3schools.com/css/tryit.asp?filename=trycss_form_responsive
 -https://www.w3schools.com/css/css_form.asp
 -https://codepen.io/samnorton/pen/zBYMJG
+-www.google.com
 ### Deploy
 
 -deployes using heroku [here](https://dashboard.heroku.com/apps/go-rn/deploy/github)
