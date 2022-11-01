@@ -10,5 +10,3 @@ const City = new Schema(
 )
 
 module.exports = mongoose.model('City', City)
-
-import React from 'react'
