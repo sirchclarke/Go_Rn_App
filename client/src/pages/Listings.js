@@ -7,7 +7,7 @@ const Listings = () => {
   const [listings, setListings] = useState([])
 
   const getListings = async () => {
-    const response = await axios.get(`http://localhost:3001/listings`)
+    const response = await axios.get(`/listings`)
     setListings(response.data.listings)
     console.log(response.data)
   }

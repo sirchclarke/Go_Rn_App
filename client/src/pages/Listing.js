@@ -17,7 +17,7 @@ const Listing = (props) => {
   }
 
   const getListings = async () => {
-    const response = await axios.get(`http://localhost:3001/listings`)
+    const response = await axios.get(`/listings`)
     const filteredListings = response.data.listings.filter((listing) =>
       listingMatched(listing)
     )

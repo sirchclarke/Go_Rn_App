@@ -23,7 +23,7 @@ const UpdateListingForm =(props)=>{
     let navigate=useNavigate()
 const handleSubmit=async(e)=>{
     e.preventDefault()
-    await axios.put(`http://localhost:3001/listing/${listingId}`,formState)
+    await axios.put(`/listing/${listingId}`,formState)
     setFormState(initialList)
     navigate('/listings')
 }

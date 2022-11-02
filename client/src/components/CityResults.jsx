@@ -9,7 +9,7 @@ const CityResults = () => {
     const [cityResults, getCityResults] = useState([])
 
     const getCityId = async () => {
-      const response = await axios.get(`http://localhost:3001/listings/city/${id}`)
+      const response = await axios.get(`/listings/city/${id}`)
     getCityResults(response.data)
    console.log(response.data)
     }

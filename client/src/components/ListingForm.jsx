@@ -23,7 +23,7 @@ const ListingForm = () => {
 
     const handleSubmit = async (e) => {
       e.preventDefault()
-       axios.post('http://localhost:3001/listing', newListing)
+       axios.post('/listing', newListing)
       setNewListing(initialForm)
       navigate('/listings')
     }

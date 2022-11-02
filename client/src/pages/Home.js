@@ -15,7 +15,7 @@ const Home = () => {
   // const[citiesById, setCitiesById] = useState([])
 
   const getCities = async () => {
-    const response = await axios.get(`http://localhost:3001/cities`)
+    const response = await axios.get(`/cities`)
     console.log(response.data.cities)
     setCities(response.data.cities)
   }
@@ -31,7 +31,7 @@ const Home = () => {
   }
   const getSearchResults = async (e) => {
     e.preventDefault()
-    const response = await axios.get(`http://localhost:3001/listings`)
+    const response = await axios.get(`/listings`)
     const filteredListings = response.data.listings.filter(listingMatched)
 
     setSearchResults(filteredListings)

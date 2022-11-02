@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom'
 const ViewListings = (props) => {
   let Navigate=useNavigate()
   const deleteListing=async()=>{
-   await axios.delete(`http://localhost:3001/listing/${props.id}`)
+   await axios.delete(`/listing/${props.id}`)
    Navigate('/listings')
   }
 
